@@ -8,9 +8,9 @@ export const typeORMConfig: any = (configService: ConfigService) => ({
   username: configService.get<string>('DB_USERNAME'),
   password: configService.get<string>('DB_PASSWORD'),
   database: configService.get<string>('DB_DATABASE'),
-  synchronize: true,
+  synchronize: false,
   logging: true,
-  entities: [`${__dirname}/../../database/entity/*.{js,ts}`],
+  entities: [`${__dirname}/../../database/entity/*.{js,ts}`],
   migrations: [`${__dirname}/../../database/migration/*.{js,ts}`],
   subscribers: [`${__dirname}/../../database/subscribers/*.{js,ts}`],
 });

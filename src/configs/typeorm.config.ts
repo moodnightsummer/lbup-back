@@ -1,5 +1,11 @@
 import { ConfigService } from '@nestjs/config';
 import 'reflect-metadata';
+import { Exercise } from '../database/\bentity/Exercises';
+import { Inbody } from '../database/\bentity/Inbody';
+import { User } from '../database/\bentity/User';
+import { WeightRecommendationLog } from '../database/\bentity/WeightRecommendationLog';
+import { WorkoutSession } from '../database/\bentity/WorkoutSession';
+import { WorkoutSet } from '../database/\bentity/WorkoutSet';
 
 export const typeORMConfig: any = (configService: ConfigService) => ({
   type: 'postgres',
@@ -10,7 +16,14 @@ export const typeORMConfig: any = (configService: ConfigService) => ({
   database: configService.get<string>('DB_DATABASE'),
   synchronize: false,
   logging: true,
-  entities: [`${__dirname}/../../database/entity/*.{js,ts}`],
+  entities: [
+    User,
+    Exercise,
+    Inbody,
+    WeightRecommendationLog,
+    WorkoutSession,
+    WorkoutSet,
+  ],
   migrations: [`${__dirname}/../../database/migration/*.{js,ts}`],
   subscribers: [`${__dirname}/../../database/subscribers/*.{js,ts}`],
 });

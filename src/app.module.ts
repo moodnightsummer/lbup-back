@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeORMConfig } from './configs/typeorm.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { WorkoutModule } from './workout/workout.module';
+import { ExerciseModule } from './exercise/exercise.module';
 
 @Module({
   imports: [
@@ -16,8 +16,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       useFactory: typeORMConfig,
       inject: [ConfigService],
     }),
+    WorkoutModule,
+    ExerciseModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

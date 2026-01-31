@@ -1,7 +1,8 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { WorkoutService } from './workout.service';
 import { StartWorkOutDto } from './dto/startWorkout.dto';
-import { CustomResponse } from '../commons/dto/customResponse.dto';
+import { CustomResponse } from '@/commons/dto/customResponse.dto';
+import { AddWorkoutSetDto } from './dto/addWorkoutSet.dto';
 
 @Controller('workout')
 export class WorkoutController {
@@ -13,7 +14,9 @@ export class WorkoutController {
   }
 
   @Post('set/add')
-  async workoutSetAdd(@Body() body) {
+  async workoutSetAdd(@Body() body: AddWorkoutSetDto) {
+    console.log(body);
+
     return this.workoutService.workoutSetAdd(body);
   }
 }

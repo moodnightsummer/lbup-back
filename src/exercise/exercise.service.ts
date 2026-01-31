@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CustomResponse } from '../commons/dto/customResponse.dto';
+import { CustomResponse } from '@/commons/dto/customResponse.dto';
 import { DataSource } from 'typeorm';
-import { Exercise } from '../database/\bentity/Exercises';
+import { Exercise } from '@/database/entity/Exercises';
 
 @Injectable()
 export class ExerciseService {

@@ -1,12 +1,12 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
-import { User } from './\bentity/User';
-import { Exercise } from './\bentity/Exercises';
-import { Inbody } from './\bentity/Inbody';
-import { WeightRecommendationLog } from './\bentity/WeightRecommendationLog';
-import { WorkoutSession } from './\bentity/WorkoutSession';
-import { WorkoutSet } from './\bentity/WorkoutSet';
+import { User } from './entity/User';
+import { Exercise } from './entity/Exercises';
+import { Inbody } from './entity/Inbody';
+import { WeightRecommendationLog } from './entity/WeightRecommendationLog';
+import { WorkoutSession } from './entity/WorkoutSession';
+import { WorkoutSet } from './entity/WorkoutSet';
 
 dotenv.config();
 

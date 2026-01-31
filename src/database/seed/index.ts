@@ -1,4 +1,4 @@
-import { AppDataSource } from '../data-source';
+import { AppDataSource } from '@/database/data-source';
 import { seedExercises } from './exercise.seed';
 
 async function runSeeds() {

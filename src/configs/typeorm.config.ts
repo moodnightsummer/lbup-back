@@ -1,11 +1,11 @@
 import { ConfigService } from '@nestjs/config';
 import 'reflect-metadata';
-import { Exercise } from '../database/\bentity/Exercises';
-import { Inbody } from '../database/\bentity/Inbody';
-import { User } from '../database/\bentity/User';
-import { WeightRecommendationLog } from '../database/\bentity/WeightRecommendationLog';
-import { WorkoutSession } from '../database/\bentity/WorkoutSession';
-import { WorkoutSet } from '../database/\bentity/WorkoutSet';
+import { Exercise } from '../database/entity/Exercises';
+import { Inbody } from '../database/entity/Inbody';
+import { User } from '../database/entity/User';
+import { WeightRecommendationLog } from '../database/entity/WeightRecommendationLog';
+import { WorkoutSession } from '../database/entity/WorkoutSession';
+import { WorkoutSet } from '../database/entity/WorkoutSet';
 
 export const typeORMConfig: any = (configService: ConfigService) => ({
   type: 'postgres',

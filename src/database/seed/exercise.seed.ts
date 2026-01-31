@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
-import { Exercise } from '../\bentity/Exercises';
-import { MuscleGroup } from '../../commons/enums/muscle';
-import { ExerciseCategory, EquipmentType } from '../../commons/enums/muscle';
+import { Exercise } from '@/database/entity/Exercises';
+import { MuscleGroup } from '@/commons/enums/muscle';
+import { ExerciseCategory, EquipmentType } from '@/commons/enums/muscle';
 
 export async function seedExercises(dataSource: DataSource) {
   const repo = dataSource.getRepository(Exercise);

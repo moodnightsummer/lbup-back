@@ -4,6 +4,7 @@ import { typeORMConfig } from './configs/typeorm.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { WorkoutModule } from './workout/workout.module';
 import { ExerciseModule } from './exercise/exercise.module';
+import { RuleModule } from './rule/rule.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ExerciseModule } from './exercise/exercise.module';
     }),
     WorkoutModule,
     ExerciseModule,
+    RuleModule,
   ],
 })
 export class AppModule {}

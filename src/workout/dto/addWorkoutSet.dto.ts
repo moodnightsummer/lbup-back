@@ -1,8 +1,10 @@
+import { Type } from 'class-transformer';
 import {
   IsBoolean,
   IsInt,
   IsNotEmpty,
   IsNumber,
+  IsOptional,
   IsString,
   IsUUID,
 } from 'class-validator';
@@ -28,6 +30,7 @@ export class AddWorkoutSetDto {
   isSuccess: boolean;
 
   @IsBoolean()
+  @Type(() => Boolean)
   isRecommended: boolean;
 
   @IsInt()
@@ -36,4 +39,8 @@ export class AddWorkoutSetDto {
   @IsNotEmpty()
   @IsUUID()
   sessionId: string;
+
+  @IsOptional()
+  @IsUUID()
+  recommendationLogId?: string;
 }

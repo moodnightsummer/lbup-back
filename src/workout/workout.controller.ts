@@ -15,8 +15,6 @@ export class WorkoutController {
 
   @Post('set/add')
   async workoutSetAdd(@Body() body: AddWorkoutSetDto) {
-    console.log(body);
-
     return this.workoutService.workoutSetAdd(body);
   }
 }
